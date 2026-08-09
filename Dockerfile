@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM php:8.4-fpm
 
 # Instalar dependencias del SO
 RUN apt-get update && apt-get install -y \
@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     supervisor \
     nginx \
     net-tools \
+    procps \
+ procps \
     && rm -rf /var/lib/apt/lists/*
 
 # Instalar Composer
